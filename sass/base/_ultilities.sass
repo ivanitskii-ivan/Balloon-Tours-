@@ -1,0 +1,53 @@
+.margin-bottom_80px
+    margin-bottom: 8rem
+
+.margin-bottom_10px
+    margin-bottom: 1rem
+
+.mb_30px
+    margin-bottom: 3rem
+
+.mb_40px
+    margin-bottom: 4rem
+.mb_150px
+    margin-bottom: 15rem
+.row
+    display: flex
+    gap: 2rem
+    justify-content: center
+    @include screen(tab-port)
+        justify-content: center
+        flex-wrap: wrap
+
+.text-align-center
+    text-align: center
+
+.im-1,.im-2,.im-3
+    position: absolute
+    transition: .2s all
+    &:hover
+        z-index: 1003
+        transform: scale(1.2)
+        border: solid .3rem $color-brown-light
+        border-radius: .5rem
+        padding: .3rem
+
+.im-2
+    top: 1rem
+    left: 24rem
+    z-index: 1000
+.im-3
+    top: 12rem
+    left: 10rem
+    z-index: 1002
+
+.video-group
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(90deg, rgba(186, 133, 84, 0.5) 0.03%, rgba(1, 1, 1, 0.5) 99.94%)
+        z-index: 1000

@@ -1,0 +1,61 @@
+.header
+    position: relative
+    background: linear-gradient(90deg, rgba($color-brown-light,0.7 ) 0.03%, rgba(1,1,1, 0.7 )99.94%),url('../img/heroBg.jpg') center / cover no-repeat
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%)
+    min-height: 130rem
+    height: 95vh
+    @include  screen(phone)
+        height: 60vh
+        min-height: 75rem
+
+.header
+    &__content
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%,-50%)
+        width: 100%
+        text-align: center
+    &__logo
+        position: absolute
+        left: 2rem
+        top: 2rem
+        img
+            @include screen(phone)
+                height: 10rem
+
+.title
+    color: #ffff
+    &__first
+        display: block
+        text-transform: uppercase
+        font-weight: 800
+        line-height: 6rem
+        letter-spacing: 1rem
+        font-size: 5rem
+        animation: left .75s ease-in .2s
+        animation-fill-mode: backwards
+        backface-visibility: hidden
+        margin-bottom: 1rem
+        @include screen(tab-port)
+            font-size: 4rem
+            letter-spacing: .5rem
+        @include  screen(phone)
+            font-size: 4rem
+            letter-spacing: .2rem
+    &__secondary
+        display: block
+        font-weight: 100
+        font-size: 4rem
+        letter-spacing: .5rem
+        line-height: 4.8rem
+        animation: right .75s ease-in .2s
+        animation-fill-mode: backwards
+        backface-visibility: hidden
+        margin-bottom: 6.5rem
+        @include screen(tab-port)
+            font-size: 3rem
+            letter-spacing: .5rem
+        @include  screen(phone)
+            font-size: 2.5rem
+            letter-spacing: .2rem

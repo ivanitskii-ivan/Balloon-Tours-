@@ -1,0 +1,75 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+
+    @include screen(tab)
+        font-size: 50%
+
+    @include screen(tab-port)
+        font-size: 45%
+
+    @include screen(phone)
+        font-size: 30%
+
+    @include screen(big-screen)
+        font-size: 75%
+.hide
+    display: none
+
+.body-container
+    font-family: Roboto,sans-serif
+    font-size: 1.6rem
+    font-weight: 400
+    letter-spacing: .2rem
+    padding: 5rem
+    color: #777
+    background-color: $color-white
+    background-color: #f7f7f7
+
+    @include screen(phone)
+        padding: 3rem
+    @include screen(small-phone)
+      min-width: 300px
+ul li 
+    list-style: none
+a   
+    text-decoration: none
+    color: $color-white
+
+.container
+    margin: 0 auto
+    max-width: 114rem
+    &_center
+        text-align: center
+    &_gradient
+        padding: 10rem
+        background: linear-gradient(90deg, $color-brown-dark, $color-brown-light )
+        @include  screen(phone)
+            padding: 4rem
+    &_padding-40px
+        padding: 4rem
+
+.video-bg
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.background-gradient
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(90deg, rgba(186, 133, 84, 0.5) 0.03%, rgba(1, 1, 1, 0.5) 99.94%)
+    z-index: 1000
+
+
+
+        

@@ -1,0 +1,85 @@
+.form
+    padding: 5rem
+    &__label-input
+        opacity: 0
+        display: flex
+        align-items: center
+        gap: 1rem
+        transition: all .2s
+        transform: translateY(-100%)
+        &::after
+            content: url('../icons/succses.svg')
+            opacity: 1
+
+    &__checkbox
+        display: none
+
+    &__label-checkbox
+        position: relative
+        cursor: pointer
+        padding-left: 3rem
+        font-size: 1.6rem
+        font-weight: 700
+        @include screen(tab)
+            font-size: 1.4rem
+        @include screen(tab-port)
+            font-size: 2rem
+
+    &-group
+        display: flex
+        flex-direction: column
+        width: 30rem
+        gap: 1rem
+        @include screen(tab-port)
+           width: 40rem 
+        @include screen(small-phone)
+            width: 100%
+
+        &__input
+            padding: 1.5rem
+            letter-spacing: .2rem
+            font-weight: 400
+            color: $color-black
+            border: none
+            outline: none
+            z-index: 1000
+            &:focus
+                border-bottom: solid 2px red
+            &:focus:invalid
+                border-bottom: solid 2px red
+            &:focus:valid
+                border-bottom: solid 2px green
+            &:focus:valid + label
+                opacity: 1
+                transform: translateY(0%)
+        &__row
+            flex-direction: row
+            width: 55%
+            gap: 3rem
+            @include  screen(tab-port)
+                flex-direction: column
+                width: 100%
+    &__btn-radio
+        position: absolute
+        border-radius: 50%
+        top: -0.1rem
+        left: 0%
+        height: 2rem
+        width: 2rem
+        border: solid .3rem $color-brown-dark
+        display: block
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            width: 1rem
+            height: 1rem
+            border-radius: 50%
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            background: $color-brown-dark
+            opacity: 0
+
+    &__checkbox:checked ~ &__label-checkbox &__btn-radio::after
+        opacity: 1

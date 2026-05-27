@@ -1,0 +1,18 @@
+
+.section-adventure
+    // padding-top: 8rem
+.adventure-content
+    background: linear-gradient(90deg, rgba($color-brown-light,0.7 ) 0.03%, rgba(1,1,1, 0.7 )99.94%), url('../img/section-adventure.jpg') center / cover no-repeat
+    clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 90%)
+    height: 70vh
+    min-height: 60rem
+    @include  screen(tab-port)
+        min-height: 160rem
+    &__row
+        @include screen(tab-port)
+            flex-wrap: wrap
+    &__container
+        display: flex
+        align-items: center
+        height: 100%
+        padding: 0 2rem

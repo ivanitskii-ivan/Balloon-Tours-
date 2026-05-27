@@ -1,0 +1,35 @@
+@mixin style-link
+    text-decoration: none
+    text-transform: uppercase
+    color: $color-gray
+    display: inline-block
+    border: none
+
+//media screen
+    //phone 600px    
+    //tab-port 900px 
+    //tab 1200px
+    //big-screen //1800px
+        //or
+    // phone 576px
+    // tab 768px
+    // laptop notebook 992px
+    // monitor 1200px
+//
+
+@mixin screen($breakPoint)
+    @if $breakPoint == small-phone
+        @media (max-width:320px)  
+            @content         
+    @if $breakPoint == phone
+        @media( max-width: 600px )
+            @content
+    @if $breakPoint == tab-port
+        @media( max-width: 900px )
+            @content
+    @if $breakPoint == tab
+        @media( max-width: 1200px )
+            @content
+    @if $breakPoint == big-screen
+        @media( min-width: 1800px )
+            @content

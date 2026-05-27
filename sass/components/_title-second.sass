@@ -1,0 +1,30 @@
+.title-second
+    font-size: 3.6rem
+
+    text-transform: uppercase
+    letter-spacing: 1rem
+    font-weight: 800
+    background: linear-gradient(90deg, rgba($color-brown-dark,0.7 ) 0.03%, rgba(1,1,1, 0.7 )99.94%)
+    -webkit-background-clip: text
+    color: transparent
+    transition: all .5s
+    backface-visibility: hidden
+
+    @include screen(tab-port)
+        font-size: 3.5rem
+        letter-spacing: .3rem
+    @include  screen (small-phone)
+        font-size: 3rem
+    &:hover
+        transform: skewY(2deg) skewX(1deg) scale(1.2)
+        text-shadow: $text-shadow-dark
+    &_white
+        position: relative
+        color: $color-white
+        z-index: 10001
+        // &:hover
+        //     transform: none
+    &_not-animate
+        &:hover
+            transform: none
+            text-shadow: none

@@ -1,0 +1,19 @@
+.card
+    background: rgb(255, 255, 255, 0.7)
+    border-radius: .5rem
+    padding: 2.5rem
+    box-shadow: 0rem .1rem .4rem $color-black
+    width: calc( 100% /4 )
+    @include screen(tab-port)
+        width: calc(100% - 8rem)
+    &__content
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        gap: 1rem
+    &_scale
+        transition: .2s all
+        &:hover
+            transform: scale(1.1)
+            box-shadow: .2rem .4rem .8rem $color-black
