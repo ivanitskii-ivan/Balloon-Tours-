@@ -1105,7 +1105,8 @@ a {
 
 @media(max-width: 900px) {
     .form-group {
-        width: 40rem
+        width: 100%;
+        max-width: 30rem;  
     }
 }
 
