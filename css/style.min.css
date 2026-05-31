@@ -147,7 +147,7 @@ a {
 }
 @media (max-width: 600px) {
   .container_gradient {
-    padding: 4rem;
+    padding: 1.4rem;
   }
 }
 .container_padding-40px {
@@ -478,8 +478,8 @@ a {
 }
 @media (max-width: 600px) {
   .section-about__images {
-    min-width: 60rem;
-    padding-left: 3rem;
+    min-width: 55rem;
+    padding-left: 0;
     height: 44rem;
   }
 }
@@ -646,8 +646,9 @@ a {
 @media (max-width: 600px) {
   .card-rotate__back {
     transform: none;
-    clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
-    top: -8rem;
+    clip-path: none;
+    top: 0;
+    border-radius: 0;
   }
 }
 .card-rotate__booking {
@@ -698,7 +699,7 @@ a {
 }
 @media (max-width: 600px) {
   .card-rotate__elements {
-    height: 45rem;
+    height: 40rem;
   }
 }
 .card-rotate__element {
